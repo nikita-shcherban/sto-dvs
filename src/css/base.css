@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 :root {
   /* font-family: Inter, Avenir, Helvetica, Arial, sans-serif; */
   font-family: Montserrat, sans-serif;
@@ -16,12 +20,6 @@
   -webkit-text-size-adjust: 100%;
 }
 
-*,
-::after,
-::before {
-  box-sizing: border-box;
-}
-
 body {
   display: flex;
   flex-direction: column;
@@ -33,6 +31,11 @@ body {
 main {
   flex-grow: 1;
 }
+
 main:has(.back-link) {
   text-align: center;
+}
+
+body:has(.callback-overlay.is-open) {
+  overflow-y: hidden;
 }

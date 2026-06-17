@@ -1,50 +1,20 @@
-import iziToast from 'izitoast';
-import 'izitoast/dist/css/iziToast.min.css';
-import {
-  clearGallery,
-  createGallery,
-  hideLoader,
-  showLoader,
-} from './js/render-functions';
-import { getImagesByQuery } from './js/pixabay-api';
+import lottie from 'lottie-web';
 
-const formSearch = document.querySelector('.form');
+// Ждем, пока браузер полностью построит HTML-дерево (DOM)
+document.addEventListener('DOMContentLoaded', () => {
+  const container = document.getElementById('lottie-container');
 
-formSearch.addEventListener('submit', handleSubmit);
-
-function handleSubmit(event) {
-  event.preventDefault();
-  const searchQuery = event.currentTarget.elements['search-text'].value.trim();
-
-  if (!searchQuery) {
-    return;
-  }
-
-  clearGallery();
-  showLoader();
-
-  getImagesByQuery(searchQuery)
-    .then(response => {
-      if (response.hits.length === 0) {
-        iziToast.error({
-          message:
-            'Sorry, there are no images matching your search query. Please try again!',
-          position: 'topRight',
-        });
-        return;
-      }
-      createGallery(response.hits);
-    })
-    .catch(error => {
-      console.error(error);
-      iziToast.error({
-          message:
-            'Sorry, an error occurred. Please try again!',
-          position: 'topRight',
-        });
-    })
-    .finally(() => {
-      hideLoader();
-      formSearch.reset();
+  // Проверяем, нашел ли JS наш блок в HTML
+  if (container) {
+    lottie.loadAnimation({
+      container: container,
+      renderer: 'svg',
+      loop: true,
+      autoplay: true,
+      path: '/RedCar.json', // Путь к файлу в папке public
     });
-}
+    console.log('Lottie успешно запущен!');
+  } else {
+    console.error('Ошибка: Блок #lottie-container не найден в HTML!');
+  }
+});

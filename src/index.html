@@ -1,36 +1,234 @@
 <!doctype html>
-<html lang="en">
+<html lang="uk">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>11 HW</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/3.0.1/modern-normalize.min.css"
+      integrity="sha512-q6WgHqiHlKyOqslT/lgBgodhd03Wp4BEqKeW6nNtlOY4quzyG3VoQKFrieaCeSnuVseNKRGpGeDU3qPmabCANg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
     <link rel="stylesheet" href="./css/styles.css" />
+    <title>DVS</title>
   </head>
   <body>
+    <header class="header">
+      <div class="bg-header"></div>
+
+      <div class="container">
+        <button type="button" class="menu-btn"></button>
+        <address class="site-address">
+          <p class="address-info">Контакти:</p>
+          <ul class="address-list">
+            <li class="address-item">
+              <a href="#contacts" class="link">+380 (11) 111-11-11</a>
+            </li>
+            <li class="address-item">
+              <a href="mailto:sto@master.dvs" class="link"> sto@master.dvs </a>
+            </li>
+            <li class="address-item">
+              <p class="fact-address">м. Запоріжжя, вул. Козака Бабури</p>
+            </li>
+          </ul>
+        </address>
+        <nav class="site-nav">
+          <a href="#" class="logo">
+            <img src="" alt="" />
+          </a>
+          <ul class="nav-list">
+            <li class="nav-item">
+              <a href="" class="link">Про нас</a>
+            </li>
+            <li class="nav-item">
+              <a href="services.html" class="link">Послуги</a>
+            </li>
+          </ul>
+          <button type="button" class="call-btn" id="openCallback">
+            Замовити дзвінок
+          </button>
+        </nav>
+      </div>
+    </header>
+
     <main>
-      <form class="form">
-        <label>
+      <section class="hero-section section">
+        <img src="./images/logo.png" alt="DVS MasterOk" width="700" />
+        <div id="lottie-container"></div>
+      </section>
+      <section class="services section">
+        <div class="container">
+          <h2 class="title-section">Послуги для вас</h2>
+          <ul class="services-list">
+            <li class="services-item">
+              <p class="services-p">Діагностика</p>
+            </li>
+            <li class="services-item">
+              <p class="services-p">Ремонт</p>
+            </li>
+            <li class="services-item">
+              <p class="services-p">Заміна</p>
+            </li>
+            <li class="services-item">
+              <p class="services-p">Заправка та ремонт кондиціонера</p>
+            </li>
+            <li class="services-item">
+              <p class="services-p">Ремонт будь-якої КПП</p>
+            </li>
+            <li class="services-item">
+              <p class="services-p">Ремонт ходової</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section></section>
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <div class="social-wrapper">
+          <p class="social-text">Ми в соціальних мережах:</p>
+          <ul class="social">
+            <li class="social-item">
+              <a
+                href="https://youtube.com/@DvsMasterOk"
+                class="social-link"
+                target="_blank"
+                ><img
+                  src="./images/youtube.png"
+                  width="38"
+                  alt="Youtube link"
+                /><span>YouTube</span></a
+              >
+            </li>
+            <li class="social-item">
+              <a
+                href="https://t.me/DvsMasterOk"
+                class="social-link"
+                target="_blank"
+                ><img
+                  src="./images/telegram.png"
+                  width="38"
+                  alt="Telegram link"
+                /><span>Telegram</span></a
+              >
+            </li>
+            <li class="social-item">
+              <a
+                href="https://instagram.com/dvsmasterok"
+                class="social-link"
+                target="_blank"
+                ><img
+                  src="./images/instagram.png"
+                  width="38"
+                  alt="Instagram link"
+                /><span>Instagram</span></a
+              >
+            </li>
+            <li class="social-item">
+              <a
+                href="https://tiktok.com/@DvsMasterOk"
+                class="social-link"
+                target="_blank"
+                ><img
+                  src="./images/tiktok.png"
+                  width="38"
+                  alt="Tiktok link"
+                /><span>Tik Tok</span></a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="contacts-wrapper">
+          <p class="contacts-text">Телефонуйте:</p>
+          <ul class="contacts" id="contacts">
+            <li class="contacts-item">
+              <a href="tel:+380666086005" class="tel-number"
+                ><img
+                  src="./images/vodafone.png"
+                  alt="VF"
+                  width="24"
+                  height="24"
+                /><span>+380 (66) 608-60-05</span></a
+              >
+            </li>
+            <li class="contacts-item">
+              <a href="tel:+380631014917" class="tel-number"
+                ><img
+                  src="./images/lifecell.png"
+                  alt="LC"
+                  width="24"
+                  height="24"
+                /><span>+380 (63) 101-49-17</span></a
+              >
+            </li>
+            <li class="contacts-item">
+              <a href="tel:+380986144497" class="tel-number"
+                ><img
+                  src="./images/kyivstar.png"
+                  alt="KS"
+                  width="24"
+                  height="24"
+                /><span>+380 (98) 614-44-97</span></a
+              >
+            </li>
+          </ul>
+        </div>
+        <p class="footer-text">Ми піклуємось про кожне авто, як про своє.</p>
+      </div>
+    </footer>
+
+    <div class="callback-overlay" id="windowOverlay">
+      <div class="callback" id="windowCallback">
+        <button type="button" class="callback-close" id="closeCallback">
+          <svg class="close-btn" width="10" height="10">
+            <use href="./images/icons.svg#close"></use>
+          </svg>
+        </button>
+        <p class="callback-title">Напишіть свої дані і ми вам передзвонимо!</p>
+        <form name="callback-form" class="callback-form">
+          <label class="label-form" for="name">Ваше ім'я</label>
           <input
+            class="input-form"
             type="text"
-            name="search-text"
-            placeholder="Search images..."
+            name="name"
+            id="name"
+            placeholder="Наприклад, Микола (Обов'язково)"
             required
           />
-        </label>
-        <button type="submit">Search</button>
-      </form>
-      <ul class="gallery"></ul>
-      <div class="loader-container is-hidden">
-        <span class="loader"></span>
+          <label class="label-form" for="telNumber">Ваш номер телефону</label>
+          <input
+            class="input-form"
+            type="tel"
+            name="telNumber"
+            id="telNumber"
+            placeholder="Контактний номер телефону (Обов'язково)"
+            required
+          />
+          <label class="label-form" for="question">Питання</label>
+          <textarea
+            class="input-form textarea-form"
+            type="text"
+            name="question"
+            id="question"
+            placeholder="Коротко напишіть ваше питання. (Не обов'язково)"
+            required
+          ></textarea>
+          <button type="submit" class="callback-btn">Відправити</button>
+        </form>
       </div>
-    </main>
-    <script type="module" src="./main.js"></script>
+    </div>
+    <script type="module" src="main.js"></script>
+    <script src="https://unpkg.com"></script>
   </body>
 </html>
